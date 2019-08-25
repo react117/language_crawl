@@ -7,15 +7,6 @@ import re
 class GlobalLangCrawl(scrapy.Spider):
 	name = "my_global_scraper"
 
-	# First Start Url
-	start_urls = ["https://fundrazr.com/find?category=Health"]
-
-	npages = 2
-
-	# This mimics getting the pages using the next button. 
-	for i in range(2, npages + 2):
-		start_urls.append("https://fundrazr.com/find?category=Health&page="+str(i)+"")
-	
 	def parse(self, response):
 		url  = "https://www.anandabazar.com/sport/bwf-world-championships-final-pv-sindhu-vs-nozomi-okuhara-dgtl-1.1036258" 
 		yield scrapy.Request(url, callback=self.parse_dir_contents)	
