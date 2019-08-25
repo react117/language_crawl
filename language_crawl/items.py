@@ -8,11 +8,11 @@
 import scrapy
 
 class LangCrawlItem(scrapy.Item):
-	campaignTitle = scrapy.Field()
-	amountRaised = scrapy.Field()
-	goal = scrapy.Field()
-	currencyType = scrapy.Field()
-	endDate = scrapy.Field()
-	numberContributors = scrapy.Field()
-	story = scrapy.Field()
-	url = scrapy.Field()
+	storyDetails = scrapy.Field()
+	storyDate = scrapy.Field()
+	storyTitle = scrapy.Field()
+	# amountRaised = scrapy.Field()
+	# goal = scrapy.Field()
+	# currencyType = scrapy.Field()
+	# numberContributors = scrapy.Field()
+	# url = scrapy.Field()
